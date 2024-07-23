@@ -1,16 +1,21 @@
+import errorImg from "../assets/404-graphic.png";
+import { NavLink } from "react-router-dom";
+
 export default function NotFound() {
   return (
     <>
-      <div className="min-h-[80vh] grid place-content-center">
-        <p className="font-bold text-center text-4xl">404 - Page Not Found</p>
-        <p className="font-bold text-center text-xl text-slate-400">
-          Try again
-        </p>
-        <img
-          src="https://picsum.photos/660/400"
-          alt="Page not found"
-          className="flex content-center mt-6 rounded-xl"
-        />
+      {/* <div className="m-auto min-h-screen flex justify-center flex-wrap place-content-center bg-cyan-950"> */}
+      <div className="grid grid-col-2 place-content-center bg-cyan-950 py-10">
+        <figure className="place-self-center w-2/3">
+          <img src={errorImg} alt="Page not found" />
+        </figure>
+        <div className="flex-row place-self-center">
+          <NavLink to="/">
+            <button className="font-bold text-center text-xl btn">
+              Go back Home
+            </button>
+          </NavLink>
+        </div>
       </div>
     </>
   );
