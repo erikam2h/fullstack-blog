@@ -84,7 +84,7 @@ export default function NewPost() {
       <div className=" flex justify-center  m-auto min-h-screen py-10 max-w-lg  items-center">
         <form
           onSubmit={handleCreate}
-          className="flex flex-col flex-1  px-8 pt-8 pb-4  shadow appearance-none border rounded  leading-tight"
+          className="flex flex-col flex-1 bg-white  px-8 pt-8 pb-4  shadow appearance-none border rounded  leading-tight"
         >
           <div className="mb-4">
             <label
@@ -146,7 +146,7 @@ export default function NewPost() {
             </label>
             <input
               required
-              type="url"
+              type="text"
               id="cover"
               name="cover"
               placeholder="Update Cover Photo URL Here!"
