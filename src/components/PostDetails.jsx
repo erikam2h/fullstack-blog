@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate, Navigate } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -11,7 +11,6 @@ export default function PostDetails() {
     axios
       .get(`http://localhost:5000/API/posts/${id}`)
       .then((res) => {
-        // console.log(res.data);
         setPost(res.data);
       })
       .catch((err) => {
@@ -54,7 +53,7 @@ export default function PostDetails() {
           <Link to="/">
             <button className="font-bold btn">Go back Home</button>
           </Link>
-          <Link to="/posts/edit">
+          <Link to={`/posts/edit/${post.id}`}>
             <button className="font-bold btn btn-accent">Edit</button>
           </Link>
           <button onClick={handleDelete} className="font-bold btn btn-error">
