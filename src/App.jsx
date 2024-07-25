@@ -8,9 +8,9 @@ import {
 import Layout from "./layout/MainLayout";
 import Home from "./pages/Home";
 import NewPost from "./pages/NewPost";
-import PostDetails from "./components/PostDetails";
+import PostDetails from "./pages/PostDetails";
 import NotFound from "./pages/NotFound";
-import EditPost from "./components/EditPost";
+import EditPost from "./pages/EditPost";
 
 function App() {
   const router = createBrowserRouter(
