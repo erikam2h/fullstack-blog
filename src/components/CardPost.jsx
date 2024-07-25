@@ -5,7 +5,7 @@ export default function CardPost({ post }) {
     <>
       <div className="card bg-base-100 shadow-xl">
         <figure>
-          <img src={post.cover} alt={post.tltle} />
+          <img src={post.cover} alt={post.title} />
           {/* {post.cover} */}
         </figure>
         <div className="card-body">

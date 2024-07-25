@@ -1,10 +1,11 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function PostDetails() {
   const { id } = useParams();
   const [post, setPost] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -18,6 +19,19 @@ export default function PostDetails() {
       });
   }, []);
 
+  const handleDelete = () => {
+    if (window.confirm("Are you sure you want to delete this post?")) {
+      axios
+        .delete(`http://localhost:5000/API/posts/${id}`)
+        .then(() => {
+          navigate("/");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
+
   return (
     <>
       <div className="max-w-screen-md m-auto min-h-screen py-10">
@@ -25,7 +39,7 @@ export default function PostDetails() {
           {post.title}
         </h1>
         <figure className="drop-shadow-lg my-10 ">
-          <img src={post.cover} alt={post.tltle} className="rounded-xl" />
+          <img src={post.cover} alt={post.title} className="rounded-xl" />
         </figure>
 
         <div className="flex justify-between mb-6">
@@ -41,7 +55,9 @@ export default function PostDetails() {
             <button className="font-bold btn">Go back Home</button>
           </Link>
           <button className="font-bold btn btn-accent">Edit</button>
-          <button className="font-bold btn btn-error">Delete</button>
+          <button onClick={handleDelete} className="font-bold btn btn-error">
+            Delete
+          </button>
         </div>
       </div>
     </>
