@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function CardPost({ post }) {
   return (
     <>
@@ -17,7 +19,9 @@ export default function CardPost({ post }) {
 
           <p className="truncate text-wrap line-clamp-2">{post.content}</p>
           <div className="card-actions justify-end mt-4">
-            <button className="btn btn-accent btn-sm">Read more</button>
+            <Link to={`/posts/${post.id}`}>
+              <button className="btn btn-accent btn-sm">Read more</button>
+            </Link>
           </div>
         </div>
       </div>
