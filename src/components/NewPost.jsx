@@ -88,7 +88,7 @@ export default function NewPost() {
         >
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-xl font-bold mb-2"
               htmlFor="author"
             >
               Author
@@ -100,12 +100,12 @@ export default function NewPost() {
               name="author"
               placeholder="Write an Author Name Here!"
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-xl font-bold mb-2"
               htmlFor="title"
             >
               Title
@@ -117,13 +117,13 @@ export default function NewPost() {
               name="title"
               placeholder="Write the Title Name Here!"
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
 
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-xl font-bold mb-2"
               htmlFor="content"
             >
               Content
@@ -134,12 +134,12 @@ export default function NewPost() {
               name="content"
               placeholder="Write the Content Name Here!"
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-xl font-bold mb-2"
               htmlFor="cover"
             >
               Cover Photo
@@ -151,15 +151,20 @@ export default function NewPost() {
               name="cover"
               placeholder="Update Cover Photo URL Here!"
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="flex gap-6">
-            <button type="submit" className="font-bold btn btn-primary">
+            <button
+              type="submit"
+              className="font-bold btn btn-primary flex-1 w-full text-xl"
+            >
               Create
             </button>
-            <Link to="/">
-              <button className="font-bold btn btn-error">Cancel</button>
+            <Link to="/" className="flex-1">
+              <button className="font-bold btn btn-error w-full text-xl">
+                Cancel
+              </button>
             </Link>
           </div>
         </form>
