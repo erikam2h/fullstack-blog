@@ -8,14 +8,10 @@ export default function Home() {
   // const [page, setPage] = useState(1);
 
   useEffect(() => {
-    // try {
-    // } catch (error) {
-    //   toast.error(error.message);
-    // }
     axios
       .get(`http://localhost:5000/API/posts`)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setPosts(res.data);
       })
       .catch((err) => {
