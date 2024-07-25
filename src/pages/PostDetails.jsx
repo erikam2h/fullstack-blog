@@ -5,13 +5,21 @@ import axios from "axios";
 export default function PostDetails() {
   const { id } = useParams();
   const [post, setPost] = useState([]);
+  const [serverState, setServerState] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
       .get(`http://localhost:5000/API/posts/${id}`)
       .then((res) => {
-        setPost(res.data);
+        // console.log(res.data);
+        if (res.data.length === 0) {
+          setPost(res.data);
+          setServerState(false);
+        } else {
+          setPost(res.data);
+          setServerState(true);
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -31,7 +39,7 @@ export default function PostDetails() {
     }
   };
 
-  return (
+  return serverState ? (
     <>
       <div className="flex flex-col gap-y-10 items-center   py-10">
         <h1 className="text-3xl text-center text-accent font-bold capitalize">
@@ -74,6 +82,16 @@ export default function PostDetails() {
               Delete
             </button>
           </div>
+        </div>
+      </div>
+    </>
+  ) : (
+    <>
+      <div className="flex gap-y-10 items-center justify-center   py-10">
+        <div className=" flex items-center justify-center    min-h-screen text-center ">
+          <p className="text-center font-bold text-3xl text-secondary">
+            Loading...
+          </p>
         </div>
       </div>
     </>
