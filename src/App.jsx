@@ -5,11 +5,11 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Layout from "./components/Layout";
-import Home from "./components/Home";
+import Layout from "./layout/MainLayout";
+import Home from "./pages/Home";
 import NewPost from "./components/NewPost";
 import PostDetails from "./components/PostDetails";
-import NotFound from "./components/NotFound";
+import NotFound from "./pages/NotFound";
 import EditPost from "./components/EditPost";
 
 function App() {
