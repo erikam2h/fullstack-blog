@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Hero from "./Hero";
-import CardPost from "./CardPost";
+import Hero from "../components/Hero";
+import CardPost from "../components/CardPost";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);

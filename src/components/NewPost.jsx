@@ -77,6 +77,7 @@ export default function NewPost() {
 //       });
 //   };
 
+
 //   return (
 //     <>
 //       <div className=" flex justify-center  m-auto min-h-screen py-10 max-w-lg  items-center">
@@ -170,3 +171,4 @@ export default function NewPost() {
 //     </>
 //   );
 // }
+

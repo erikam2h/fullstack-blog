@@ -49,11 +49,11 @@ export default function EditPost() {
       <div className=" flex justify-center  m-auto min-h-screen py-10 max-w-lg  items-center">
         <form
           onSubmit={handleEdit}
-          className="flex flex-col flex-1  px-8 pt-8 pb-4  shadow appearance-none border rounded  leading-tight"
+          className="flex flex-col flex-1 bg-white   px-8 pt-8 pb-4  shadow appearance-none border rounded  leading-tight"
         >
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-xl text-gray-700  font-bold mb-2"
               htmlFor="author"
             >
               Author
@@ -65,12 +65,12 @@ export default function EditPost() {
               name="author"
               value={postEdit.author}
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-xl text-gray-700 font-bold mb-2"
               htmlFor="title"
             >
               Title
@@ -82,13 +82,13 @@ export default function EditPost() {
               name="title"
               value={postEdit.title}
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
 
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-xl text-gray-700  font-bold mb-2"
               htmlFor="content"
             >
               Content
@@ -99,12 +99,12 @@ export default function EditPost() {
               name="content"
               value={postEdit.content}
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-xl text-gray-700  font-bold mb-2"
               htmlFor="cover"
             >
               Cover Photo
@@ -115,15 +115,20 @@ export default function EditPost() {
               name="cover"
               placeholder="Update Cover Photo URL Here!"
               onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
-          <div className="flex gap-6">
-            <button type="submit" className="font-bold btn btn-primary">
+          <div className="flex justify-center  gap-6">
+            <button
+              type="submit"
+              className="font-bold btn btn-primary text-xl w-full flex-1"
+            >
               Update
             </button>
-            <Link to={`/posts/${id}`}>
-              <button className="font-bold btn btn-error">Cancel</button>
+            <Link to={`/posts/${id}`} className="flex-1">
+              <button className="font-bold btn btn-error text-xl w-full ">
+                Cancel
+              </button>
             </Link>
           </div>
         </form>
