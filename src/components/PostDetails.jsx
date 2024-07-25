@@ -54,7 +54,9 @@ export default function PostDetails() {
           <Link to="/">
             <button className="font-bold btn">Go back Home</button>
           </Link>
-          <button className="font-bold btn btn-accent">Edit</button>
+          <Link to="/posts/edit">
+            <button className="font-bold btn btn-accent">Edit</button>
+          </Link>
           <button onClick={handleDelete} className="font-bold btn btn-error">
             Delete
           </button>

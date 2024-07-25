@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import NewPost from "./components/NewPost";
 import PostDetails from "./components/PostDetails";
 import NotFound from "./components/NotFound";
+import EditPost from "./components/EditPost";
 
 function App() {
   const router = createBrowserRouter(
@@ -18,6 +19,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/posts/:id" element={<PostDetails />} />
         <Route path="/posts/new" element={<NewPost />} />
+        <Route path="/posts/edit" element={<EditPost />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     )
