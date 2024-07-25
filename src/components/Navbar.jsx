@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="w-full py-1 bg-base-100 shadow">
-        <div className="container m-auto flex justify-between mt-0 py-2">
+        <div className="container m-auto flex justify-between  mt-0 py-6">
           <NavLink to="/">
             <svg
               id="logo-79"
@@ -49,16 +49,26 @@ export default function Navbar() {
             </svg>
           </NavLink>
           <ul className="md:flex items-center justify-between pt-4 md:pt-0 gap-8">
-            <NavLink to="/">
-              <li className="font-bold text-accent text-xl hover:text-secondary">
-                Home
-              </li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? " text-accent text-2xl hover:text-secondary font-bold outline px-3 py-1"
+                  : "font-bold text-accent text-2xl hover:text-secondary px-3 py-1"
+              }
+            >
+              <li>Home</li>
             </NavLink>
 
-            <NavLink to="/posts/new">
-              <li className="font-bold text-accent text-xl hover:text-secondary">
-                Create post
-              </li>
+            <NavLink
+              to="/posts/new"
+              className={({ isActive }) =>
+                isActive
+                  ? " text-accent text-2xl hover:text-secondary font-bold outline px-3 py-1"
+                  : "font-bold text-accent text-2xl hover:text-secondary px-3 py-1"
+              }
+            >
+              <li>Create post</li>
             </NavLink>
           </ul>
         </div>
