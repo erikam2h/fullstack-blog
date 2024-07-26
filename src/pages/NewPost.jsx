@@ -42,61 +42,63 @@ export default function NewPost() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="bg-white p-4 rounded-lg shadow-2xl w-[400px] mt-[-10%]">
-        <p className="text-4xl font-bold mb-4 text-center p-10">
-          Create Your New Post
-        </p>
+    <>
+      <div className="flex flex-col gap-y-10 items-center py-10">
+        <div className="max-w-screen-md bg-base-100 m-auto pb-6 rounded-xl">
+          <div className="card-body items-center text-center">
+            <p className="text-4xl font-bold mb-4 text-center p-8">
+              Create Your New Post
+            </p>
+            <div className="space-y-6">
+              <input
+                className="border-base-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-accent"
+                type="text"
+                placeholder="Author"
+                value={form.author}
+                onChange={(e) => setForm({ ...form, author: e.target.value })}
+              />
 
-        <div className="space-y-6">
-          <input
-            className="border-gray-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            type="text"
-            placeholder="Author"
-            value={form.author}
-            onChange={(e) => setForm({ ...form, author: e.target.value })}
-          />
+              <input
+                type="text"
+                className="border-base-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-accent"
+                placeholder="Title"
+                value={form.title}
+                onChange={(e) => setForm({ ...form, title: e.target.value })}
+              />
 
-          <input
-            type="text"
-            className="border-gray-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Title"
-            value={form.title}
-            onChange={(e) => setForm({ ...form, title: e.target.value })}
-          />
+              <textarea
+                className="border-base-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-accent"
+                type="text"
+                placeholder="Content"
+                value={form.content}
+                onChange={(e) => setForm({ ...form, content: e.target.value })}
+              ></textarea>
 
-          <input
-            className="border-gray-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            type="text"
-            placeholder="Content"
-            value={form.content}
-            onChange={(e) => setForm({ ...form, content: e.target.value })}
-          />
-
-          <input
-            className="border-gray-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            type="text"
-            placeholder="Cover"
-            value={form.cover}
-            onChange={(e) => setForm({ ...form, cover: e.target.value })}
-          />
-
-          <div className="flex justify-center mt-2">
-            <button
-              onClick={handleSubmit}
-              className="border-2 p-1 rounded-lg w-20 bg-blue-500  text-white hover:bg-blue-700 transition-colors"
-            >
-              Submit
-            </button>
-            <Link to="/">
-              <button className="border-2 p-1 rounded-lg w-20 bg-red-500  text-white hover:bg-red-700 transition-colors">
-                Cancel
+              <input
+                className="border-base-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:-ring-accent"
+                type="text"
+                placeholder="Cover"
+                value={form.cover}
+                onChange={(e) => setForm({ ...form, cover: e.target.value })}
+              />
+            </div>
+            <div className="card-actions justify-end mt-6">
+              <button
+                onClick={handleSubmit}
+                className="font-bold btn btn-accent text-lg"
+              >
+                Submit
               </button>
-            </Link>
+              <Link to="/">
+                <button className="font-bold btn btn-error flex-1 text-lg">
+                  Cancel
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
