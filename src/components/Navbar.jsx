@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Themes from "./Themes";
 
 export default function Navbar() {
   return (
@@ -71,6 +72,7 @@ export default function Navbar() {
               <li>Create post</li>
             </NavLink>
           </ul>
+          <Themes />
         </div>
       </nav>
     </>
