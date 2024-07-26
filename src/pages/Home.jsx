@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Hero from "../components/Hero";
 import CardPost from "../components/CardPost";
+import loader from "../assets/loader.gif";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -41,10 +42,8 @@ export default function Home() {
     <>
       <Hero />
       <div className="container m-auto min-h-screen py-12">
-        <div className="flex items-center justify-center    min-h-screen text-center">
-          <p className="text-center font-bold text-3xl text-secondary">
-            Loading...
-          </p>
+        <div className="flex flex-col items-center justify-center    min-h-screen text-center">
+          <img src={loader} alt="loader icon" />
         </div>
       </div>
     </>
