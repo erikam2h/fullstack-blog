@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
+import imageNotFound from "../assets/imageNotFound.png";
 
 export default function CardPost({ post }) {
   return (
     <>
       <div className="card bg-base-100 shadow-xl">
         <figure>
-          <img src={post.cover} alt={post.title} />
+          <img
+            src={post.cover}
+            alt={post.title}
+            onError={(e) => {
+              e.target.src = `${imageNotFound}`;
+            }}
+          />
           {/* {post.cover} */}
         </figure>
         <div className="card-body">
