@@ -14,7 +14,7 @@ export default function EditPost() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/API/posts/${id}`)
+      .get(`https://blogs-api-s835.onrender.com/API/posts/${id}`)
       .then((res) => {
         setPostEdit(res.data);
       })
@@ -34,7 +34,7 @@ export default function EditPost() {
   const handleEdit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/API/posts/${id}`, postEdit)
+      .put(`https://blogs-api-s835.onrender.com/API/posts/${id}`, postEdit)
       .then((res) => {
         navigate(`/posts/${id}`);
         console.log("Resource updated successfully", res.data);

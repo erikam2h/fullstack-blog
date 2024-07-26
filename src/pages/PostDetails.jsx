@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import loader from "../assets/loader.gif";
+import imageNotFound from "../assets/imageNotFound.png";
 
 export default function PostDetails() {
   const { id } = useParams();
@@ -11,7 +12,7 @@ export default function PostDetails() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/API/posts/${id}`)
+      .get(`https://blogs-api-s835.onrender.com/API/posts/${id}`)
       .then((res) => {
         // console.log(res.data);
         if (res.data.length === 0) {
@@ -30,7 +31,7 @@ export default function PostDetails() {
   const handleDelete = () => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       axios
-        .delete(`http://localhost:5000/API/posts/${id}`)
+        .delete(`https://blogs-api-s835.onrender.com/API/posts/${id}`)
         .then(() => {
           navigate("/");
         })
@@ -52,6 +53,9 @@ export default function PostDetails() {
               src={post.cover}
               alt={post.title}
               className="rounded-tr-xl rounded-tl-xl"
+              onError={(e) => {
+                e.target.src = `${imageNotFound}`;
+              }}
             />
           </figure>
 
