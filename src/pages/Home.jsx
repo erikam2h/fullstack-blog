@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/API/posts`)
+      .get(`https://blogs-api-s835.onrender.com/API/posts`)
       .then((res) => {
         // console.log(res.data);
 
