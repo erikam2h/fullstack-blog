@@ -67,7 +67,7 @@ export default function NewPost() {
 //   const handleCreate = (e) => {
 //     e.preventDefault();
 //     axios
-//       .post(`http://localhost:5000/API/posts/`, newPost)
+//       .post(`https://blogs-api-s835.onrender.com/API/posts/`, newPost)
 //       .then((res) => {
 //         navigate(`/posts/${res.data.result.id}`);
 //         // console.log(res.data.result.id);
