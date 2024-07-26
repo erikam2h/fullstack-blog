@@ -6,7 +6,7 @@ export default function Footer() {
           <aside className="grid-flow-col items-center">
             <p>
               Educational Project created by <br />
-              <b>Berkan, Erika & Sanid</b>
+              <b>Erika, Sanid & Berkan</b>
             </p>
           </aside>
           <nav className="md:place-self-center md:justify-self-end">
