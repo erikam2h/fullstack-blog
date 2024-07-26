@@ -43,15 +43,18 @@ export default function NewPost() {
 
   return (
     <>
-      <div className="flex flex-col gap-y-10 items-center py-10">
-        <div className="max-w-screen-md bg-base-100 m-auto pb-6 rounded-xl">
+      <div className="flex flex-col min-h-screen  gap-y-10 items-center py-10">
+        <div
+          className="max-w-screen-md bg-base-100 m-auto pb-6 rounded-xl shadow
+leading-tight"
+        >
           <div className="card-body items-center text-center">
             <p className="text-4xl font-bold mb-4 text-center p-8">
               Create Your New Post
             </p>
             <div className="space-y-6">
               <input
-                className="border-base-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-accent"
+                className="border-base-300 border text-xl rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-accent"
                 type="text"
                 placeholder="Author"
                 value={form.author}
@@ -60,14 +63,14 @@ export default function NewPost() {
 
               <input
                 type="text"
-                className="border-base-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-accent"
+                className="border-base-300 border text-xl rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-accent"
                 placeholder="Title"
                 value={form.title}
                 onChange={(e) => setForm({ ...form, title: e.target.value })}
               />
 
               <textarea
-                className="border-base-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:ring-accent"
+                className="border-base-300 border text-xl rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-accent"
                 type="text"
                 placeholder="Content"
                 value={form.content}
@@ -75,7 +78,7 @@ export default function NewPost() {
               ></textarea>
 
               <input
-                className="border-base-300 border rounded-lg w-full p-1 focus:outline-none focus:ring-2 focus:-ring-accent"
+                className="border-base-300 border text-xl rounded-lg w-full py-2 px-3 focus:outline-none focus:ring-2 focus:-ring-accent"
                 type="text"
                 placeholder="Cover"
                 value={form.cover}

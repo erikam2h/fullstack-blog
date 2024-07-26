@@ -46,11 +46,14 @@ export default function EditPost() {
 
   return (
     <>
-      <div className=" flex justify-center  m-auto min-h-screen max-w-lg  items-center">
+      <div className=" flex justify-center max-w-screen-md  m-auto min-h-screen   items-center">
         <form
           onSubmit={handleEdit}
-          className="flex flex-col flex-1 bg-base-100  px-8 pt-8 pb-4  shadow appearance-none rounded-xl leading-tight"
+          className="flex flex-col flex-1 bg-base-100  px-8 pt-8 pb-14  shadow appearance-none rounded-xl leading-tight"
         >
+          <p className="text-4xl font-bold mb-4 text-center p-8">
+            Edit Your Post
+          </p>
           <div className="mb-4">
             <label
               className="block text-xl text-base-content  font-bold mb-2"
@@ -65,7 +68,7 @@ export default function EditPost() {
               name="author"
               value={postEdit.author}
               onChange={handleChange}
-              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border-base-300  focus:ring-2 focus:-ring-accent text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-4">
@@ -82,7 +85,7 @@ export default function EditPost() {
               name="title"
               value={postEdit.title}
               onChange={handleChange}
-              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border-base-300 focus:ring-2 focus:-ring-accent text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
 
@@ -99,7 +102,7 @@ export default function EditPost() {
               name="content"
               value={postEdit.content}
               onChange={handleChange}
-              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border-base-300  focus:ring-2 focus:-ring-accent text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-4">
@@ -115,7 +118,7 @@ export default function EditPost() {
               name="cover"
               placeholder="Update Cover Photo URL Here!"
               onChange={handleChange}
-              className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow border-base-300  focus:ring-2 focus:-ring-accent text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="flex justify-center gap-6 mt-4">
