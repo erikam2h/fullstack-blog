@@ -1,6 +1,7 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import loader from "../assets/loader.gif";
 
 export default function PostDetails() {
   const { id } = useParams();
@@ -89,9 +90,7 @@ export default function PostDetails() {
     <>
       <div className="flex gap-y-10 items-center justify-center   py-10">
         <div className=" flex items-center justify-center    min-h-screen text-center ">
-          <p className="text-center font-bold text-3xl text-secondary">
-            Loading...
-          </p>
+          <img src={loader} alt="loader icon" />
         </div>
       </div>
     </>
