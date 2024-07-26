@@ -43,11 +43,11 @@ export default function PostDetails() {
 
   return serverState ? (
     <>
-      <div className="flex flex-col gap-y-10 items-center   py-10">
+      <div className="flex flex-col gap-y-10 items-center py-10">
         <h1 className="text-3xl text-center text-accent font-bold capitalize">
           {post.title}
         </h1>
-        <div className="max-w-screen-md bg-base-100 m-auto   pb-6 rounded-xl">
+        <div className="max-w-screen-md bg-base-100 m-auto pb-6 rounded-xl">
           <figure className="drop-shadow-lg mb-4 ">
             <img
               src={post.cover}

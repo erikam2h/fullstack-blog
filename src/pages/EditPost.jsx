@@ -46,14 +46,14 @@ export default function EditPost() {
 
   return (
     <>
-      <div className=" flex justify-center  m-auto min-h-screen py-10 max-w-lg  items-center">
+      <div className=" flex justify-center  m-auto min-h-screen max-w-lg  items-center">
         <form
           onSubmit={handleEdit}
-          className="flex flex-col flex-1 bg-white   px-8 pt-8 pb-4  shadow appearance-none border rounded  leading-tight"
+          className="flex flex-col flex-1 bg-base-100  px-8 pt-8 pb-4  shadow appearance-none rounded-xl leading-tight"
         >
           <div className="mb-4">
             <label
-              className="block text-xl text-gray-700  font-bold mb-2"
+              className="block text-xl text-base-content  font-bold mb-2"
               htmlFor="author"
             >
               Author
@@ -70,7 +70,7 @@ export default function EditPost() {
           </div>
           <div className="mb-4">
             <label
-              className="block text-xl text-gray-700 font-bold mb-2"
+              className="block text-xl text-base-content font-bold mb-2"
               htmlFor="title"
             >
               Title
@@ -88,7 +88,7 @@ export default function EditPost() {
 
           <div className="mb-4">
             <label
-              className="block text-xl text-gray-700  font-bold mb-2"
+              className="block text-xl text-base-content  font-bold mb-2"
               htmlFor="content"
             >
               Content
@@ -104,7 +104,7 @@ export default function EditPost() {
           </div>
           <div className="mb-4">
             <label
-              className="block text-xl text-gray-700  font-bold mb-2"
+              className="block text-xl text-base-content  font-bold mb-2"
               htmlFor="cover"
             >
               Cover Photo
@@ -118,7 +118,7 @@ export default function EditPost() {
               className="shadow text-lg appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
-          <div className="flex justify-center  gap-6">
+          <div className="flex justify-center gap-6 mt-4">
             <button
               type="submit"
               className="font-bold btn btn-primary text-xl w-full flex-1"
