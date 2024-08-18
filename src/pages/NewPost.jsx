@@ -19,7 +19,7 @@ export default function NewPost() {
 
     try {
       const response = await fetch(
-        "https://blogs-api-s835.onrender.com/API/posts",
+        "https://blogs-api-1rx2.onrender.com/API/posts",
         {
           method: "POST",
           headers: {
@@ -164,7 +164,7 @@ leading-tight"
 //   const handleCreate = (e) => {
 //     e.preventDefault();
 //     axios
-//       .post(`https://blogs-api-s835.onrender.com/API/posts/`, newPost)
+//       .post(`https://blogs-api-1rx2.onrender.com/API/posts/`, newPost)
 //       .then((res) => {
 //         navigate(`/posts/${res.data.result.id}`);
 //         // console.log(res.data.result.id);
