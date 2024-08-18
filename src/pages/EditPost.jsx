@@ -34,7 +34,7 @@ export default function EditPost() {
   const handleEdit = (e) => {
     e.preventDefault();
     axios
-      .put(`https://blogs-api-s835.onrender.com/API/posts/${id}`, postEdit)
+      .put(`https://blogs-api-1rx2.onrender.com/API/posts/${id}`, postEdit)
       .then((res) => {
         navigate(`/posts/${id}`);
         console.log("Resource updated successfully", res.data);
