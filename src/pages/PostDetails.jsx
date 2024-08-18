@@ -12,7 +12,7 @@ export default function PostDetails() {
 
   useEffect(() => {
     axios
-      .get(`https://blogs-api-s835.onrender.com/API/posts/${id}`)
+      .get(`https://blogs-api-1rx2.onrender.com/API/posts/${id}`)
       .then((res) => {
         // console.log(res.data);
         if (res.data.length === 0) {
@@ -31,7 +31,7 @@ export default function PostDetails() {
   const handleDelete = () => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       axios
-        .delete(`https://blogs-api-s835.onrender.com/API/posts/${id}`)
+        .delete(`https://blogs-api-1rx2.onrender.com/API/posts/${id}`)
         .then(() => {
           navigate("/");
         })
