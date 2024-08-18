@@ -14,7 +14,7 @@ export default function EditPost() {
 
   useEffect(() => {
     axios
-      .get(`https://blogs-api-s835.onrender.com/API/posts/${id}`)
+      .get(`https://blogs-api-1rx2.onrender.com/API/posts/${id}`)
       .then((res) => {
         setPostEdit(res.data);
       })
